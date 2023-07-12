@@ -20,10 +20,10 @@ You can download the executable binary file for your platform in [this repositor
 Once you've downloaded or installed the binary, run it with the correct flags for your device.
 
 ### Devices with wifi stickers:
-Use the flags `-address` (The IP address of your device on your network), with `-ssid`, and `-wifi-password` using values from your sticker.
+Use the flag `-address` (The IP address of your device on your network), with `-ssid`, and `-wifi-password` using values from your sticker.
 
 ### Devices without wifi stickers:
-Use the flags `-serial`, `-password`, and `-device`. Use the [get_devices.py](https://github.com/libdyson-wg/libdyson-neon/blob/main/get_devices.py) script in libdyson-neon to find the correct values.
+Use the flag `-address` with `-serial`, `-password`, and `-device`. Use the [get_devices.py](https://github.com/libdyson-wg/libdyson-neon/blob/main/get_devices.py) script in libdyson-neon to find the correct values.
 
 ```bash
 # if you used `go install`
