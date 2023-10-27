@@ -33,7 +33,7 @@ func main() {
 		fmt.Printf("%s: Subscribed to %s\n", time.Now().Format(time.TimeOnly), fmt.Sprintf("%s/%s/status/current", config.Device(), config.Username()))
 	}
 
-	if token := c.Subscribe(fmt.Sprintf("%s/%s250/command", config.Device(), config.Username()), 0, printMessage); token.Wait() && token.Error() != nil {
+	if token := c.Subscribe(fmt.Sprintf("%s/%s/command", config.Device(), config.Username()), 0, printMessage); token.Wait() && token.Error() != nil {
 		log.Fatal(token.Error())
 	} else {
 		fmt.Printf("%s: Subscribed to %s\n", time.Now().Format(time.TimeOnly), fmt.Sprintf("%s/%s/command", config.Device(), config.Username()))
